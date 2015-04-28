@@ -1,0 +1,449 @@
+@import 'src/css/normalize';
+@import 'src/css/iscroll';
+
+/*************************************************
+ * Site-Specifc CSS
+*************************************************/
+
+$background-color:  #E6E6E6;
+$font-main:  'Rokkitt';
+$font-base-size: 1em;
+$font-hover-color: #ff9966;
+$nav-button-color: #fff;
+$nav-bg-color: rgba(51,51,51, 0.5);
+$article-bg-color: rgba(231,231,231, 0.7);
+$article-top-margin: 8%;
+$article-top-margin-small: 88px;
+$article-paragraph-font-color: rgba(100,100,100, 1.0);
+
+body { font-family: $font-main; background: $background-color;}
+a {text-decoration: none;}
+
+
+@mixin border-radius($top, $right, $bottom, $left) {
+  -webkit-border-radius: $top $right $bottom $left;
+     -moz-border-radius: $top $right $bottom $left;
+      -ms-border-radius: $top $right $bottom $left;
+          border-radius: $top $right $bottom $left;
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset:"") {
+      -webkit-box-shadow:$top $left $blur $color #{$inset};
+      -moz-box-shadow:$top $left $blur $color #{$inset};
+      box-shadow:$top $left $blur $color #{$inset};
+    }
+
+
+/********************************************************/
+
+header{
+	position: fixed; top: 0; width: 100%; color: $nav-button-color; height: 50px; z-index: 40000;
+	
+	/* Adds shadow to the bottom of the bar */
+	@include box-shadow(0px, 0px, 3px, #000000);
+	/* Adds the transparent background */
+	background-color: $nav-bg-color;
+	
+	.logo { display: inline; font-size: 2em; color: $nav-button-color; padding-top: 9px; padding-left: 25px; float: left; width: 30%; min-width: 320px; border-style: solid; border-width: 0px;}
+	.logoDesc {display: inline;  color: #ccc; margin-left: .4em; letter-spacing: .02em; font-size: .7em; border-style: solid; border-width: 0px;}
+}	
+	
+	
+#navigation { text-align: center; padding-top: 12px; z-index: 50000; 	
+	a { font-size: 1.4em; padding-left: 1.2em; padding-right: 1.2em; line-height: 1.5em; color: $nav-button-color;}
+	a:hover { color: $font-hover-color;}
+	.active { color: $font-hover-color;}
+	ul { float: right; padding-top: .25em; padding-right: 5%;}
+	li { float: left; }	
+}
+
+article {
+	@include border-radius(5px, 5px, 5px, 5px);
+	@include box-shadow(0, 0, 25px, rgba(0,0,0,0.2)); 
+	background-color: $article-bg-color; 
+	margin-top: $article-top-margin; 
+	padding: 2.3em 2.3em;  
+	z-index: 1500;
+	
+	h2 { font-size: 2.4em; line-height: .5em; color: $article-paragraph-font-color;}
+	p { font-size: 1.2em;  line-height: 1.1em; margin-top: 1em; color: $article-paragraph-font-color;}
+	a { color: $font-hover-color;}
+	a:visited {color:$font-hover-color;}	
+}
+
+/*use min-width for iPad*/
+.sectionContent {height: 1500px; width: 100%; position: relative; border-style: solid; border-width: 2px;}
+
+/* About */
+#about article {width: 60%; margin-left: 30%;}
+
+/* Client Work */
+#work article {width: 950px; height: 590px; margin-left: 6%; margin-top: 6%; position: absolute; font-size: 1em; border-style: solid; border-width: 1px;}
+
+#work li .workContent {
+ 	width: 345px;
+	max-height:590px;
+	float: left;
+	font-size: 1em;
+	color: #E0E0E0;
+	text-decoration: none;
+	border: 1px solid; border-color: green;
+}
+
+
+#work li .workTitle {
+	font-size: 1.5em;
+	line-height: 1.2em;
+	font-style: bold;
+	color: #FFF;
+}
+
+
+/* LaunchBx */
+#launchbx article {   z-index: 22;  margin-left: 5%; width: 40%; position: absolute;}
+#launchbx .screenshot { background: url() no-repeat transparent; background-size: cover; margin-left: 50%; width: 600px; height: 1000px; position: absolute; top: 0px;  border: 1px solid; border-color: pink;}
+	
+/* Groovable */
+#groovable .screenshot { background: url() no-repeat transparent; margin-left: 5%; width: 500px; height: 1000px; position: absolute; top: 0px;  border: 1px solid; border-color: pink;}
+#groovable article {  margin: 100px 0 0 50%; position: absolute; top: 0; width: 45%; margin-left: 48%;}
+
+/* OOTO */
+#ooto article {   z-index: 22;  margin-left: 5%; top: 5%; width: 40%; position: absolute;}
+#ooto .screenshot { background: url() no-repeat transparent; margin-left: 55%; width: 600px; height: 1000px; position: absolute; top: 0px; border: 1px solid; border-color: pink;}
+
+
+
+/*  ************************************************************ */
+/*  Media Queries 
+/*  ************************************************************ */
+
+
+/*This helps cover small on desktop - need to clean-up */
+
+@media only screen and (max-width: 850px){ 
+
+	header{ height: 70px;}
+	article {margin-top: $article-top-margin-small;}	
+	#navigation a { font-size: 1.5em;}
+	#navigation ul { margin-top: -.5em; margin-right: -3em;}
+	#about article, #launchbx article, #groovable article, #ooto article  {width: 83%; margin-left: 2%;}
+	#groovable .screenshot, #launchbx .screenshot, #ooto .screenshot {display: none;}
+}
+
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 5 and 5S ----------- 
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+	  
+	.sectionContent {height: 100%; min-height: 1500px; min-width: 1120px; width: 100%; position: relative; border-style: solid; border-width: 1px;}
+	
+	header{ height: 80px; .logoDesc {display: none;}}
+	#navigation a { font-size: 2.5em;}
+	#navigation ul { margin-top: -2em; margin-right: -1em;}
+		
+  	article {margin-top: $article-top-margin-small; font-size: 1.7em;}	
+  	#about article {width: 86%; height: 90%; margin-left: 2%;}
+  	#launchbx article {width: 80%; height: 90%; margin-left: 1%; border-style: solid; border-width: 1px;}
+  	#groovable article {width: 80%; height: 90%; margin-left: 1%; border-style: solid; border-width: 1px;}
+  	#ooto article {width: 80%; height: 90%; margin-left: 1%; border-style: solid; border-width: 1px;}
+  	#groovable .screenshot, #launchbx .screenshot, #ooto .screenshot {display: none;}
+
+	
+}
+
+
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+
+}
+
+/* ----------- iPhone 6+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3) { 
+
+}
+
+/* Portrait */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 414px) 
+  and (max-device-width: 736px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* iPhone 6[portrait + landscape] 
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{#navigation {height: 75px;}}
+*/
+
+
+/* iPad [portrait] 
+@media only screen and (max-device-width: 768px) and (orientation:portrait) { 
+   	
+   	margin-top: 85px;
+   	
+   	#bodybg {  background: url(../img/slide1.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+   	#navigation {background-color: rgba(5,5,5, 0.7); height: 70px;}
+   	#navigation  a{ font-size: 1.3em; padding-left: .7em; padding-right: .7em; line-height: 1em; margin-top: -15px;}
+	#navigation .logoDesc { font-size: 1.3em; line-height: 1.5em; float: left; letter-spacing:.5px}
+	#about article { width: 75%; margin-left: 15%; }
+	
+
+	#work article { width: 950px; height: 600px;  margin-left: 0%; margin-top: 4em;}
+	#work article img {width: 80%;}
+	#launchbx article {  position: absolute; margin-left: 5%; width: 80%;}
+	
+	#groovable article {  margin: 100px 0 0 50%; position: absolute; top: 0; width: 70%; margin-left: 42%;}
+	#groovable .screenshot { background: url() no-repeat scroll center top transparent; margin-left: 6%; height: 800px; padding: 1em; position: absolute; text-indent: -9999px; top: 5%; width: 500px; border: 0px solid; border-color: pink;}
+	
+	#ooto article {top: 2%; width: 45%;}
+}
+*/
+
+/* iPad [landscape] 
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	
+	#bodybg {  background: url(../img/slide1x2.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+	#navigation {background-color: rgba(5,5,5, 0.7); height: 40px;}
+	#navigation  a{ font-size: 1.3em; padding-left: .7em; padding-right: .7em; line-height: 1em; margin-top: -15px;}
+	#about article { width: 70%; margin-left: 20%; }
+	
+	#launchbx article {margin-left: 3%; width: 47%;}
+	#launchbx .screenshot { background: url() no-repeat scroll center top transparent;  margin-left: 45%; height: 600px; padding: 1em; position: absolute; text-indent: -9999px; top: 130px; width: 600px; border: 0px solid; border-color: pink;}
+	
+
+	#device{transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);}
+
+	#work article { width: 950px; height: 600px;  margin-left: 0%; margin-top: 4em;}
+}
+*/
+
+
+
+
+
+
+/* iPhone [portrait + landscape] 
+@media only screen and (max-width: 480px){
+	html {-webkit-text-size-adjust: none;}
+	body{font-size: 90%;}
+	
+	#bodybg {  background: url(../img/slide1xm.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+	
+	article {background-color: rgba(255, 255, 255, 0.4); margin-top: 5px; padding: 1em;  line-height: 1em; box-shadow: 0; color: #333366;}
+	article h2 { font-size: 1.5em; color: #333366; text-shadow: 0 2px 0 rgba(255,255,255,0.5);}
+	
+	#about { margin-bottom: 200px;}
+	#about article { width: 90%; margin-left: 0; margin-top: 50px;}
+	#about articke h2 { font-size: 1.5em; color: #333366; text-shadow: 0 2px 0 rgba(255,255,255,0.5);}
+	
+	#work{display: none;}
+	#launchbx{display: none;}
+	#groovable{display: none;}
+	#ooto{display: none;}
+	
+	#navigation a {display: none;}
+	
+	
+	#navigation ul { float: left; margin-top: -.5em; width:100%;}
+	#navigation {background-color: rgba(5,5,5, 0.6); height: 40px;}
+	
+	#navigation a { font-size: .85em; line-height: .7em; color: #ccc; text-decoration: none;}
+	#navigation .logo { font-size: 1.5em; color: #fff; margin: 0 2px 0 10px; line-height: .5em; float: left;}
+	#navigation .logoDesc { font-size: 1em; line-height: 1.1em; float: left; letter-spacing:.35px}
+}
+*/
+
+	
+
+/* add iamges in for wider screens */
+@media screen and (min-width: 1041px) {
+    #about { background: url(../img/slide1x2.jpg) 50% 0 no-repeat fixed; }
+    #work { background: url(../img/slide2.jpg) 50% 0 no-repeat fixed;}
+    #launchbx { background: url(../img/slide3.jpg) 100% 0 no-repeat fixed;}
+    #groovable { background: url(../img/slide4.jpg) 100% 100% no-repeat fixed;}
+    #ooto { background: url(../img/slide1x2.jpg) 50% 0 no-repeat fixed;}
+	#experiments { background: url(../img/slide2.jpg)  100% 0 no-repeat fixed;}
+    
+    #about .clouds { background: rgb(255,255,255) transparent; background: rgba(255,255,255, 0.4);  z-index: 10; background: url() scroll center top transparent; margin-left: 0%; height: 100%; padding: 0em; position: absolute;  top: 0px; width: 100%; border: 0px solid; 
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);    
+    border-color: pink;}
+	#work .clouds { background: rgb(255,255,255) transparent; background: rgba(255,255,255, 0.4); z-index: 10; background: url() scroll center top transparent; margin-left: 0%; height: 100%; padding: 0em; position: absolute;  top: 0px; width: 100%; border: 0px solid; border-color: pink;}
+    #launchbx .clouds { background: rgba(55,55,55, 0.1); z-index: 9; background: url() scroll center top transparent; margin-left: 0%; height: 100%; padding: 0em; position: absolute;  top: 0px; width: 100%; border: 0px solid; border-color: pink;}
+    
+}
+
+
+
+
+/*
+@media screen and (max-width: 1040px) {
+	#bodybg {  background: url(../img/slide1x2.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }	
+}
+*/
+
+/* iPad Retina [landscape + Portrait] 
+@media only screen and (max-device-width: 1024px) and (orientation:landscape),
+only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+	#bodybg {  background: url(../img/slide1x2.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+	#navigation {background-color: rgba(5,5,5, 0.7);}
+	#navigation a { font-size: .9em; padding-left: 1em; padding-right: 1em; line-height: 1.5em; color: #fff; text-decoration: none;}
+	
+	article {padding: 1.5em 2em; line-height: .25em;}
+	article h2 { font-family: 'Rokkitt'; font-size: 2.25em; margin: 10px 0; line-height: .5em; color: #ccc; text-shadow: 0 -2px 0 rgba(5,5,5,0.5);}
+	article p {font-size: 3.2em;  line-height: 1.1em; margin-top: 1em;}
+	
+	#work {margin-left: 1em; margin-top: 15%;}
+	#work article { z-index: 21; width: 950px; height: 550px;}
+
+	#launchbx article {margin-left: 3%; width: 60%;}
+	#launchbx .screenshot { background: url(); background-repeat: no-repeat; background-size: 75%; background-position:left;  margin-top: -10%; margin-right: 10px;}
+	
+	
+	#groovable { background-image: none; -webkit-transform: translate3d(0,0,0);}
+	#groovable article {margin-right: 1%; width: 52%;}
+	
+	#ooto article {top: 2%; width: 36%;}
+	#ooto img {width: 80%;}
+	#ooto .screenshot { margin-left: 43%; margin-bottom: 10px; height: 600px; padding: .5em; position: absolute; text-indent: -9999px; top: 0px; width: 600px; border: 0px solid; border-color: pink;}
+		
+	
+	#device{transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);}
+	
+	.sectionContent { height: 1000px; padding-top: 1%; margin: 0; width: 100%; position: relative; margin: 0 auto; z-index: 1400; transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);	}
+}
+*/
+
+/* iPad [portrait] 
+@media only screen and (max-device-width: 768px) and (orientation:portrait) { 
+	#work article { width: 950px; height: 600px;  margin-left: 0%; margin-top: 10em;}
+	#ooto article {top: 5%; width: 50%;}
+	#ooto .screenshot { margin-left: 59%;}
+}
+*/
+
+
+
+
+

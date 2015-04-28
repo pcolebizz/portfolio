@@ -1,0 +1,3 @@
+Pulls in photos dynamically from XML. On rollover of thumbnail, animates to larger image. On-click will bring up the full-size image.
+
+<p><a href='img/work/interactive/photog.html' target='_blank'>Launch</a>.</p>

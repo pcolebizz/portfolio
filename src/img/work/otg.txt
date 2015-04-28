@@ -1,0 +1,2 @@
+The Off the Grid website. 
+<p><a href='http://www.offthegridsf.com' target='_blank'>Visit offthegridsf.com</a>.</p>

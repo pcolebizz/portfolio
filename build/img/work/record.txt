@@ -1,0 +1,3 @@
+Uses spirals and flowers as base shapes to generate art in real-time. Press RECORD to start recording your piece. Press PLAY to have your painting performance played back for you!
+
+<p><a href='img/work/interactive/purple_6_1600.html' target='_blank'>Launch</a>.</p>

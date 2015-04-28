@@ -1,0 +1,3 @@
+Mred was built in WPF.
+Screens of colors.
+Good stuff.

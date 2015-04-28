@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+
+  <title>Peter Cole | creative + technology</title>
+  	<meta name="description" content="Portfolio for Peter Cole | Creative Technologist">
+  	<meta name="author" content="Peter Cole">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+		
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  	<!-- Google Web Fonts -->
+  	<link href='http://fonts.googleapis.com/css?family=Leckerli+One|Rokkitt:700,400|Luckiest+Guy' rel='stylesheet' type='text/css'>
+  
+	<!-- CSS concatenated and minified -->
+  	<link rel="stylesheet" href="css/master.min.css">
+	<!-- end CSS-->
+	
+</head>
+
+<body>
+	
+	<header>
+		<div class="logo">peter cole<div class="logoDesc">creative + technology</div></div>
+				
+		<!-- Nav -->
+		<nav id="navigation">
+			<ul>
+				<li><a href="about" id="about-section">about</a></li>
+				<li><a href="work" id="work-section">work</a></li>
+				<li><a href="launchbx" id="launchbx-section">launchbx</a></li>
+				<li><a href="groovable" id="groovable-section">groovable</a></li>
+				<li><a href="ooto" id="ooto-section">ooto</a></li>
+			</ul>
+		</nav>		
+	</header>
+	
+
+	
+<div id= "main">
+
+<!--div id = "bodybg"></div>
+<div id="clouds"></div-->
+	
+	<!-- Section #1 / About -->
+	<section id="about" class="sectionContent" data-speed="6" data-type="background">  
+		<!--div class="clouds" data-type="sprite"  data-speed="2"></div-->
+		<article>
+			<h2>about</h2>
+		    	<p>Hi! I'm Peter Cole, a developer/designer from the San Francisco Bay Area. 
+		    	I like to create innovative experiences for the web, mobile, desktop, audio/video, social networks and other forms of multimedia and digital marketing.</p>
+		    	
+		    	<p>	    	
+		    	I currently oversee front-end development for apple.com. 		    	
+		    	</p>
+				
+				
+		    	<p>	    	
+		    	Prior to Apple, I was the Director of Creative Technology for <a href="http://www.innoceanusa.com">Innocean</a> where I helped build a digital practice. With Hyundai as our largest client, we created experiences for a variety of platforms that blended video, HTML5, 3D, mobile applications, and integrations with services from Google, Facebook, Twitter and others. 		    	
+		    	Before Innocean, I spent about 4 years as Technology Director for <a href="http://www.rga.com">R/GA</a>, where I worked on interactive projects 
+		    	for Nike, Microsoft, Verizon, HP and others. At R/GA I was involved in the design and development of new products that combined the desktop, 
+		    	web, mobile and social (including Nike FuelBand). 
+		    	
+		    	Prior to R/GA, I was the Director of Creative Development for <a href="http://www.akqa.com">AKQA</a>, San Francisco, 
+		    	where our clients included Nike, Microsoft, Xbox, Target, The Gap, Visa and others. While there, I helped Nike, Target and the Gap launch their first mobile experiences; worked on Nike's first Global website and campaign, for the Olympics; created one of the first SMS-controlled kiosks for Palm; and I always tried to push the limits of the browser for projects like Xbox 3 Halo, and Nike Presto.</p> 
+		    	
+		    	<p>In in my spare time, I created <a href="http://www.launchbx.net">LaunchBx</a> (beta), a web-based product
+		    	to help small businesses connect with their customers. It includes a real-time, in-context content management and publishing platform for mobile, 
+		    	desktop and social networks.
+		    	
+		    	I also created <a href="http://www.groovable.com">Groovable</a> (in alpha), a tool for helping people collect and organize their online shopping and research. </p>
+		    	
+		    	<p>The primary tools I use include HTML5, CSS3, JS/jQuery, PHP, MySQL, Action Script 3, Gulp, JSON, XML; GIT/SVN; audio/video, and lots of APIs from  different services (Google, Facebook, etc.)
+		    	
+		    	<p>Please <a href="mailto:peter@petercole.com">email me</a> if you want to say hi!</p>
+		    	
+		</article>		
+	</section>
+	
+	
+
+	<!-- Section #2 / Work -->
+		<section id="work" class="sectionContent" data-speed="5" data-type="background">  
+		<!--div class="clouds" data-type="sprite"  data-speed=".5"></div-->
+		<article>
+			<h2>work</h2>
+		    
+		    <div id="arrow-next" onclick="myScroll.scrollToPage('next', 0);return false"></div>	
+		    <div id="arrow-prev" onclick="myScroll.scrollToPage('prev', 0);return false"></div>
+		    
+			<div id="wrapper">
+				<div id="scroller">
+					
+					<ul id="thelist">
+						
+							<!--FIFA -->
+							<li><div class="imgContainer"><img src="img/work/fifa1.jpg" alt="FIFA"/></div><div class="workContent"><span class="workTitle">Prototype: Twitter-Driven WebGL Interface</span>
+							<p>WebGL/three.js, Twitter App.</p>
+							<p>Challenge: How to show the passion for your team via Tweets. The team with the most Tweets will have their team color the most prominent in the visual experience.</p>  
+							<p>Solution: I built a Twitter app that searches for Tweets for each FIFA team (eg. #arsenal). This data was then used to power various visualizations, including a 3D WebGL experience (using three.js), an iOS Native App and a physical device (a prototype built using arduino.) The team with the most social buzz, "passionate fans,"  would trigger the light for that team's color to turn on and pulse on the arduino board. Each 3D shape within the web experience represents a live tweet (for the prototype, I had to cache the results for performance sake); clicking on a shape will bring up the Tweet associated with that shape. For the prototype, I added in graphics for some Tweets that didn't have them.
+							</p>
+							<p>Visit the <a href="http://www.petercole.com/socialcurrency/webgl/examples/pc_sphere1.php" target="_blank">site</a>. (Requires WebGL)</p>
+							</div>
+							</li>
+						
+						
+						
+					
+						<!--Chop Shop -->
+						<li><div class="imgContainer"><img src="img/work/chopshop1.jpg" alt="Chop Shop App"/></div><div class="workContent"><span class="workTitle">Hyundai: Walking Dead Chop Shop</span>
+						<p>Mobile, Tablet, Browser Apps. Real-time social media campaign.</p>
+						<p>Challenge: Bring Hyundai, a sponsor of the Walking Dead TV show, into the conversation with fans of the Walking Dead. Provide the fans a tool to express themselves, and survive the zombie apocalypse!</p>  
+						<p>Solution: We created an application for mobile, tablet and browser to let fans build their own "zombie survival car." Using a Hyundai car as their base vehicle, users are able to add on zombie-fighting equipment such as flamethrowers, grenade launchers, horde plows, all within a 3D environment. The custom creation is then shared online to receive a "survival score." Post launch, we analyzed data from our sites and social networks, to craft custom, real-time campaigns back to the community.
+						</p>
+						<p>Visit the <a href="http://walkingdeadchopshop.com/" target="_blank">site</a>.</p>
+						</div>
+						</li>
+					
+					
+						<!--FJ App -->
+						<li><div class="imgContainer"><img src="img/work/fj1.png" alt="FJ App"/></div><div class="workContent"><span class="workTitle">Foot Joy: FJ Clubhouse</span>
+						<p>Native Mobile Application (currently in production). User Research and Validation Phase.</p>
+						<p>Challenge: Provide a mobile utility for the existing FJ Golf community (currently limited to desktop.) Create new ways for community members to meet, often while traveling, and to share golf tips specific to FJ courses. Grow community membership and have FJ viewed as a forward-thinking, technology-savvy brand.</p>  
+						<p>Solution: Integrated elements of FJ's existing community into a concept for a native mobile application that focuses on the ability to Play, Meet and Share. During our initial discovery and design phase, we created quick prototypes to show the flow and potential features for the app. We then brought the prototype to the golf courses, and put it into hands of potential users to explore.  We captured their feedback and used it to refine our application features and user flow. 
+						</p>
+						</div>
+						</li>
+					
+			
+						<!--Find Your 7 -->
+						<li><div class="imgContainer"><img src="img/work/findyour1.png" alt="Find Your 7"/></div><div class="workContent"><span class="workTitle">Hyundai: Find Your 7</span>
+						<p>Responsive Website and Facebook Application. Dynamically Generated Video.</p>
+						<p>Challenge: Create a mobile-first experience that extends a TV spot to the digital/social arena. The Super Bowl is the most social event of the year, with an audience that watches across multiple screens, usually with their friends.</p>  
+						<p>Solution: A responsive, mobile-first, HTML5-based experience that lets people draft their own “dream team” for a chance to go to next year’s Super Bowl. 
+						A custom algorithm looked at the frequency of Facebook friend interactions, educational background, activities and interests to create the ideal team. 
+						This data was then used to create a custom, dynamically-generated video to introduce the user’s dream team.
+						</p>
+						</div>
+						</li>
+						
+						<!-- Out of the Office iOS App and Website -->
+						<!-- li><div class="imgContainer"><img src="img/work/ooto1.png" alt="Out of the Office iOS App"/></div><div class="workContent"><span class="workTitle">Out of the Office: Conference App</span>
+						<p>Native iOS App and website.</p>
+						<p>Challenge: Allow a group of people to share ideas, photos and communicate with their colleagues back in the office, while attending a conference. When the event is over, package-up all the learnings into sharable presentation.</p>  
+						<p>Solution: OOTO is an iOS App (Android version coming), that allows teams to create "events" and invite attendees. Then, while at the event, the photos and notes taken by the attendees automatically get tagged (with user, event, date, location) and added to the group feed. After the event, users can view stats, including the number of posts (by user, date, day, presentation); hot topics; summary of key ideas; a slide-show; and download a PDF of photos, notes and stats.
+						</p>
+						<p>Visit the <a href="http://m.innoceanusa.com/feed" target="_blank">live feed</a>.</p>		
+						</div>
+						</li -->
+						
+						<!--MS Surface -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/surface1.jpg" alt="Microsoft Surface"/></div><div class="workContent"><span class="workTitle">Microsoft: Launch of Surface Tablet</span>
+						<p>Responsive Website and Online Advertising.</p>
+						<p>Challenge: "Top Secret"" project to create a digital launch strategy, including a new website, as well as social media-related content, for the launch of Microsoft's first tablet hardware: Surface. 
+						Required that we integrate with existing Surface brand and products (their original table-top devices). We had to design and build most of the experience without knowing what the product looked like, until the last few days prior to launch.</p>
+						<p>Solution: Designed and built a responsive website that lives on <a href="http://www.surface.com" target="_blank">surface.com</a>. We established a plan for content migration and a CMS, and we synced-up with the Windows 8 launch strategy (also led by our R/GA team in San Francisco). 
+						We launched at exactly the right time: during the press conference announcement for Surface.</p> 
+						<p>Visit the <a href="http://www.surface.com" target="_blank">site</a>.</p>		
+						</div>
+						</li>
+						
+						<!--Nike: Fuelband -->
+						<li><div class="imgContainer"><img src="img/work/nikefuelband1.jpg" alt="Nike Fuelband"/></div><div class="workContent"><span class="workTitle">Nike: FuelBand</span>
+						<p>Website, Native Mobile App.</p>
+						<p>Challenge: How to bring the Nike+ platform to a larger audience of non-runners.</p>  
+						<p>Solution: Created a wearable technology that tracks the regular activity that a user does throughout the day, and equate that to calories using "NikeFuel" (points). The R/GA tech team in San Francisco built the original prototype for FuelBand - using Android technology to start, to prove out the idea. We then continued on as part of the larger production team to build the final mobile app and website, as well as to test the full experience. 
+						</p>
+						<p>Visit the <a href="http://www.nikestore.com" target="_blank">site</a>.</p>		
+						</div>
+						</li>
+
+						<!--Nike: NikeStore.com -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/nikestore1.jpg" alt="Nikestore"/></div><div class="workContent"><span class="workTitle">Nike: NikeStore.com</span>
+						<p>Website/ecommerce.</p>
+						<p>Challenge: Create a website framework that supports interactive experiences ranging from marketing promotions, videos and product demonstrations to online applications (NIKEiD) and e-commerce. Allow high customization and let users “see, touch, feel” the product in real-time. Transform current Flash-based website into HTML(5).</p>  
+						<p>Solution: Rebuilt entire front-end in HTML (from Flash). Created robust framework of reusable design patterns and components that allowed for maximum flexibility in design, quick updates and direct integration with back-end. Created applications that made the experience more than just browsing shoes: NIKEiD is an online application that enables the user to design their own custom shoe. 
+						</p>
+						<p>Visit the <a href="http://www.nikestore.com" target="_blank">site</a>.</p>		
+						</div>
+						</li>
+						
+						
+						<!--HP -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/hp1.jpg" alt="hp.com"/></div><div class="workContent"><span class="workTitle">HP: HP.com</span>
+						<p>Website Redesign.</p>
+						<p>Challenge: Redesign HP.com from the ground up. Integrate social applications as well as many existing HP systems and services. Create a tighter and more unified UX that allowed for animation and full-scale graphics. Maximize SEO and allow for easy content updates.</p>
+						<p>Process: Iterative process with tight integration between ID, visual design, creative technologist, who would create prototypes and/or motion studies of the experience prior to production development, and the HP engineering team.</p>
+						<p>Note: R/GA's work is no longer live. Screenshot here shows the design that we created and launched in 2011.</p>
+						<p>Visit the <a href="http://www8.hp.com/ie/en/home.html" target="_blank">site</a>.</p>		
+						</div>
+						</li>
+						
+						
+						<!--Tacobell -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/tb1.jpg" alt="Tacobell.com"/></div><div class="workContent"><span class="workTitle">Tacobell: Tacobell.com</span>
+						<p>Website, CMS and Online Advertising.</p>
+						<p>Challenge: Redesign and rebuild tacobell.com from the ground up. Recommend CMS, tech stack, architecture, workflow, hosting environment and maintenance and support. Integrate with existing databases and services. Allow for quick updating of key content areas. Reduce use of Flash.</p>  
+						<p>Solution: HTML-based website using R/GA's custom CMS2 content management system. 
+						</p>
+						<p>Visit the <a href="http://www.tacobell.com" target="_blank">site</a>.</p>		
+						</div>
+						</li>
+						
+						
+						<!--Off the Grid -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/otg1.jpg" alt="Off the Grid SF"/></div><div class="workContent"><span class="workTitle">Off the Grid: offthegridsf.com</span>
+						<p>WordPress Website. Email Newsletters.</p>
+						<p>Off the Grid began in June of 2010 with the idea to group Street Food vendors together to allow neighbors to connect with friends, and families to reconnect with each other. Currently Off the Grid operates 23 weekly markets in the greater bay area, and works with over 180 vendors weekly.				
+						</p>
+						
+						<p>Challenge: Redesign and build for OfftheGridSF.com, using WordPress as CMS. Create new look and feel, branding and clean-up existing interface. 
+						Integrate with existing services and allow for easy maintenance and quick updates by non-technical staff.</p>  
+						<p>Solution: Redesigned website, logo and other branding; created a custom WordPress template for Off the Grid SF website and new designs for their email marketing. Also consulted on tools for streamlining their current CRM workflow. 
+						</p>
+
+						<p>Visit the <a href="http://www.offthegridsf.com" target="_blank">site</a>.</p>		
+						</div>
+						</li>
+						
+						<!--Outbid -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/outbid1.jpg" alt="Outbid"/></div><div class="workContent"><span class="workTitle">Outbid: Online Real-time Auction</span>
+						<p>Product Design. Mobile, Web and Facebook Apps</p>
+						<p>At R/GA we created a new product from scratch for a new online auction company: Outbid. 
+						We designed the logo and branding, product strategy, UX, visual design and all front-end and iOS development. 
+						On the technical side, we integrated our iOS and web application with Outbid's proprietary, real-time auction engine, and a new back-end service layer.</p>  
+
+						<p>Visit the <a href="http://www.outbid.com" target="_blank">site</a>.</p>		
+						</div>
+						</li>
+						
+						<!-- Target Gift Finder -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/target1.png" alt="Outbid"/></div><div class="workContent"><span class="workTitle">Target: Gift Finder iPhone App</span>
+						<p>Native iPhone Application.</p>
+						<p>Had fun with this one. This was Target's first iPhone release. We wanted to do something for the holiday season and take advantage of the iPhone's ability to recognize a user shaking it (accelerometer).
+						The Gift Finder app makes innovative use of the iPhone’s built-in accelerometer by selecting gift ideas at random after 
+						entering information such as gender and age range. 
+						Gifts are presented via a snow globe-style interface, activated when the user shakes the iPhone. 
+						The Target Gift Globe application is free and designed to help shoppers make gift decisions for their friends and family in a very fun 
+						and entertaining way. 
+						</p>  
+
+						<p>Visit <a href="https://www.facebook.com/video/video.php?v=55769517351" target="_blank">demo</a>.</p>		
+						</div>
+						</li>
+						
+						<!--Halo -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/halo1.jpg" alt="Halo Believe"/></div><div class="workContent"><span class="workTitle">Xbox: Halo 3 Believe</span>
+						<p>Website and online advertising.</p>
+						<p>Challenge: Create immersive website to support the release of Halo 3. We filmed a camera fly-through of a life-size diorama (recreating a battle scene from the game). 
+						We wanted the user to “be inside the scene,” to explore every detail; to scrub through the fly-through (video) without requiring full video to download.</p>  
+						<p>Solution: The fly-through video file was too large - we couldn't use it. Therefore, to allow the user to start interacting right away, we draw each frame from the video into Flash (creating a buffer to account for the play head forward and backward). To account for performance, each time a frame was changed, the old one was destroyed from memory. The result was a smooth experience that loaded quickly and allowed the user to move forward and backward through the experience.
+						It was not actually video - although it looked like it. It even fooled the CTO of Adobe, who showcased it during the Adobe MAX conference as an innovative use of web video.
+						</p>								
+						</div>
+						</li>
+						
+						<!--K&G -->
+						<!--li><div class="imgContainer"><img src="img/work/kg1.jpg"/></div><div class="workContent"><span class="workTitle">K&G Superstores: kgstores.com</span>
+						<p>Challenge: Create a website framework that supported interactive experiences ranging from marketing promotions, videos and product demonstrations to online applications (NIKEiD) and e-commerce. Allow high customization and let users “see, touch, feel” the product in real-time. Transform current Flash-based website into HTML5.</p>  
+						<p>Solution: Rebuilt entire front-end in HTML5. Created robust framework of reusable design patterns and components that allowed for maximum flexibility in design, quick updates and direct integration with back-end. Created applications that made the experience more than just browsing shoes: NIKEiD is an online application that enables the user to design their own custom shoe. 
+						</p>
+						<p>Visit the <a href="http://www.kgstores.com" target="_blank">site</a>.</p>		
+						</div>
+						</li-->
+						
+						<!--Microsoft: In-store Kiosk -->
+						<li><div class="imgContainer"><img src="img/spinner.gif" id="img/work/mred1.jpg" alt="Microsoft In-store kiosk"/></div><div class="workContent"><span class="workTitle">Microsoft: In-store Kiosk</span>						
+						<p>Desktop Application.</p>
+						<p>Challenge: Design and build an in-store kiosk in WPF (Window Presentation Foundation), to show off the features of the new Windows Operating System, Vista. Because Vista was not yet released at the time we were designing and building the experience, we had to develop for an OS that we could not test on. The experience would ultimately live in stores like Best Buy, and needed to support multiple languages</p>	
+						<p>Solution: For our experience, we recreated the 3D panel UI that was signature of the Vista OS. 
+						</div>
+						</li>
+						
+						<!--Nike Gene -->
+						<li>
+							<div class="imgContainer"><img src="img/spinner.gif" id="img/work/gene1.jpg" alt="Nike Genealogy"/></div>
+							<div class="workContent"><span class="workTitle">Nike: Genealogy of Speed</span>
+								
+								<p>Website and Outdoor experience.</p>
+
+								<p>Challenge: Demonstrate Nike’s rich, 40-year history of products. Trace the history (the “genealogy”) starting with the first “waffle” shoe.  Show and maintain complex relationships between products, their assets and their “siblings” in the family tree. Allow for outdoor experience.</p>
+
+								<p>Solution: Created dynamically generated family tree of Nike products. Entire interface was driven by database of products and drawn to screen at runtime - including the animation, colors, copy and visual effects - all showing the relationship between each product in the genealogy.
+						</p>
+						</div>
+						</li>	
+						
+						<!--Nike Presto -->
+						<li>
+							<div class="imgContainer"><img src="img/spinner.gif" id="img/work/presto1.jpg" alt="Nike Genealogy"/></div>
+							<div class="workContent"><span class="workTitle">Nike: Presto</span>
+								
+								<p>Website and online advertising.</p>
+
+								<p>Challenge: Promote the Nike Presto Shoe. Highlight the fun, artistic vibe of the brand that blends elements of street art.</p>
+
+								<p>Solution: This one was a lot of fun. I had been experimenting with the ability to record a user's actions in the browser - specifically, recording an art 
+								performance: painting, playing with shapes, colors, etc. I also created the ability to playback the recording and save it to a gallery for others to see. 
+								I had done some prototypes in Flash, and we ended up using this concept as inspiration for Nike Presto. In 2004, this was an innovative first and went on to win
+								a D&amp;AD award.</p>
+						</div>
+						</li>
+						
+						<!--Palm -->
+							<li>
+								<div class="imgContainer"><img src="img/spinner.gif" id="img/work/palm1.jpg" alt="Palm SMS-Controlled Kiosk"/></div>
+								<div class="workContent"><span class="workTitle">Palm: SMS-Controlled Kiosk</span>
+
+									<p>Outdoor/Physical application and accompanying website.</p>
+
+									<p>Challenge: Demonstrate the features of the Palm Treo to users of any smart phone.</p>
+
+									<p>Solution:  Built a giant Palm Treo, using a LCD screen and a computer, and placed it inside bus shelters and other outdoor locations. 
+									Users could interact with the giant Palm by texting codes from their own smart phone. Our system intercepted the text message and routed it back to the correct location where the Palm would respond.
+									</p>
+
+							</div>
+							</li>
+							
+							
+							
+							<!--Photo Gallery -->
+							<li>
+								<div class="imgContainer"><img src="img/spinner.gif" id="img/work/photog2.jpg" alt="Photo Gallery"/></div>
+								<div class="workContent"><span class="workTitle">Experiments: Dynamic Photo Gallery</span>
+
+									<p>I wanted to create a fun, interactive way of sorting though a gallery of photos. This experience loads photos dynamically from XML 
+									(either flat file for from web service). On rollover of thumbnail, animates up to larger image. On-click will bring up the full-size image</p>
+									<p>Visit <a href="img/work/interactive/photog.html" target="_blank">demo</a>.</p>	
+			
+								</div>
+							</li>
+							
+							
+							
+							
+							<!--3D -->
+							<li>
+								<div class="imgContainer"><img src="img/spinner.gif" id="img/work/glass3.jpg" alt="3D Glass"/></div>
+								<div class="workContent"><span class="workTitle">Experiments: 3D Glass</span>
+
+									<p>More of my experiments with 3D animation(at a very high frame rate!) Rollover to interact with the shards of glass coming at you!</p>
+									<p>Visit <a href="img/work/interactive/black_auto.html" target="_blank">demo</a>.</p>	
+		
+							</div>
+							</li>
+							
+							<!--3D -->
+							<li>
+								<div class="imgContainer"><img src="img/spinner.gif" id="img/work/record1.jpg" alt="3D Glass"/></div>
+								<div class="workContent"><span class="workTitle">Experiments: Recording Art Performance</span>
+
+									<p>This experience uses spirals and flowers as base shapes to generate art in real-time. Press RECORD to start recording your piece. 
+									Press PLAY to have your painting performance played back for you - you can even save it and share it with friends! 
+									This was the inspiration for the Nike Presto website.</p>
+									<p>Visit <a href="img/work/interactive/purple_6_1600.html" target="_blank">demo</a>.</p>	
+		
+							</div>
+							</li>
+							
+							<!-- Spider -->
+							<li>
+								<div class="imgContainer"><img src="img/spinner.gif" id="img/work/spider3.jpg" alt="3D Glass"/></div>
+								<div class="workContent"><span class="workTitle">Experiments: Wild Spider</span>
+
+									<p>Drag and drop the points of each line to create a new spider. Click to change it's color.</p>
+									<p>Visit <a href="img/work/interactive/3d_line1.html" target="_blank">demo</a>.</p>	
+		
+							</div>
+							</li>
+							
+							
+					</ul>
+				</div>
+			</div>
+
+				<div id="scroll-nav" class="story" data-speed="4" data-type="background">
+					<ul id="indicator">
+						<li onclick="myScroll.scrollToPage((0));return false" class="active">1</li>
+						<li onclick="myScroll.scrollToPage((1));return false">2</li>
+						<li onclick="myScroll.scrollToPage((2));return false">3</li>
+						<li onclick="myScroll.scrollToPage((3));return false">4</li>
+						<li onclick="myScroll.scrollToPage((4));return false">5</li>
+						<li onclick="myScroll.scrollToPage((5));return false">6</li>
+						<li onclick="myScroll.scrollToPage((6));return false">7</li>
+						<li onclick="myScroll.scrollToPage((7));return false">8</li>
+						<li onclick="myScroll.scrollToPage((8));return false">9</li>
+						<li onclick="myScroll.scrollToPage((9));return false">10</li>
+						<li onclick="myScroll.scrollToPage((10));return false">11</li>
+						<li onclick="myScroll.scrollToPage((11));return false">12</li>
+						<li onclick="myScroll.scrollToPage((12));return false">13</li>
+						<li onclick="myScroll.scrollToPage((13));return false">14</li>
+						<li onclick="myScroll.scrollToPage((14));return false">15</li>
+						<li onclick="myScroll.scrollToPage((15));return false">16</li>
+						<li onclick="myScroll.scrollToPage((16));return false">17</li>
+						<li onclick="myScroll.scrollToPage((17));return false">18</li>
+						<li onclick="myScroll.scrollToPage((18));return false">19</li>
+						<li onclick="myScroll.scrollToPage((19));return false">20</li>	
+						<li onclick="myScroll.scrollToPage((20));return false">21</li>				
+					</ul>
+				</div>
+		
+		    			
+		</article>
+	</section>
+	
+	
+	<!-- Section #3 / Lbx -->
+	<section id="launchbx" class="sectionContent" data-speed="11" data-type="background"> 
+		<div class="screenshot" data-type="sprite" data-offsetY="1620" data-Xposition="50%" data-speed="2"></div>
+		<!--div class="clouds" data-type="sprite"  data-speed="82"></div-->
+    	<article>
+    		<h2>LaunchBx</h2>
+	    	<div class="textbox">  	
+	<p>Currently in Beta, LaunchBx is an easy-to-use, web-based platform designed for restaurants and small to mid-sized business that need a quick and simple way to manage digital communication across mobile, web and social networks. Instead of having a dozen different tools to learn and manage, or having to hire costly resources to create and maintain digital executions, LaunchBx gives control to the small business owner, in one single interface.</p>	
+		
+			<p>At the core, LaunchBx is a content management and publishing system that solves the problem of having to keep multiple digital destinations up-to-date: business owners no longer have just a single website to maintain, but now, must send content and messaging out to a multitude of digital channels and different devices - often in real-time speed.</p>
+			<p>Set-up just takes a few minutes. From there, a business owner can add custom logos, images and content to create an entire website and/or create various embeddable widgets, such as a restaurant menu, or menu of services/products, by simply uploading a Excel file. 
+			LaunchBx automatically parses the Excel file, and other uploaded content, and converts it to a beautiful design that scales across mobile, table, desktop and can be used as a stand-alone widget inside Facebook or WordPress.<p>
+
+			<p>I designed and built the entire platform myself - from scratch. It is built on top of the LAMP stack, with the MVC framework CodeIgnitor. Responsive HTML5, javascript/jQuery, CSS3 is on the front. It includes API integration with several Google web services (Maps, Fonts, Calendar, etc), Facebook, YouTube, WordPress and others coming soon.</p>
+
+		<p>For more information, please visit <a href="http://www.launchbx.net" target="_blank">www.launchbx.net</a></p>
+	    </div>
+    	</article>
+				
+	</section>
+	
+	<!-- Section #4 / Groovable -->
+	<section id="groovable" class="sectionContent" data-speed="6" data-type="background">  
+		<div class="screenshot" data-type="sprite" data-offsetY="2400" data-Xposition="50%" data-speed="2"></div>
+		<article>
+    		<h2>groovable</h2>
+	    	<div class="textbox">    	
+		    	<p>Currently in Alpha, Groovable is a suite of tools to help you organize your online research and shopping. 
+		    	When you're ready to make a new purchase, chances are you are doing research by collecting information from a variety of websites, social networks, email and probably YouTube as well. 
+		    	It can be a nightmare to keep track of all this content, across multiple emails, spreadsheets, bookmarks and Facebook posts. 
+		    	Groovable gives you a single place to store all of your research. A user submits content he/she finds online, groovable automatically organizes it into a simple-to-use interface.  
+		    	</p>
+		    	<p>
+		    	Currently, a user can submit content in a number of ways: (1) directly through the groovable interface, (2) via the groovable Chrome Browser Extension, (3) via Facebook, (4) via email, which would include
+		    	services like ShareThis as well as native email and email widgets that are included on sites such as YouTube, etc. When content is submitted through email, as user can use the email subject line 
+		    	to tell groovable where/how to organize the content. 
+				</p>	
+		
+		<p>I designed and built the entire platform myself - from scratch. It is built on top of the LAMP stack, with the MVC framework CodeIgnitor. Responsive HTML5, javascript/jQuery, CSS3 is on the front. I created complex email parsing solutions to support the ability to submit content via email. There are many API integrations with services from Facebook, YouTube, WordPress and others coming soon.</p>
+
+		<p>For more information, please visit <a href="http://www.groovable.com" target="_blank">www.groovable.com</a></p>
+		    </div>
+    	</article>
+	</section>
+	
+
+	<!-- Section #5 / OOTO -->
+	<section id="ooto" class="sectionContent" data-speed="6" data-type="background">  
+		<div class="screenshot" data-type="sprite" data-offsetY="3170" data-Xposition="50%" data-speed="2"></div>
+		<article>
+    		<h2>OOTO Conference App</h2>
+	    	<div class="textbox">   
+		    	<p>Challenge: Allow a group of people to share ideas, photos and communicate with their colleagues back in the office, while attending a conference. When the event is over, package-up all the learnings into sharable presentation.</p>  
+				<p>Solution: OOTO (Out of the Office) is an iOS App (Android version coming), that allows teams to create "events" and invite attendees. 
+				Then, while at the event, the photos and notes taken by the attendees automatically get tagged (with user, event, date, location) and added to the group feed. 
+				After the event, users can view stats, including the number of posts (by user, date, day, presentation); hot topics; summary of key ideas; a slide-show; and download a PDF of photos, 
+				notes and stats.
+				<p>My colleague, Derek and I designed and built the application and had our initial user test/launch at SXSW 2013. We are currently adding new features.</p>
+
+				<p>Visit the <a href="http://m.innoceanusa.com/feed" target="_blank">live feed</a>.</p>		
+		    </div>
+    	</article>
+	</section>
+		
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		
+		
+	
+	<!-- Section #7 / Skills -->
+	<section id="skills" class="sectionContent" data-speed="6" data-type="background">  
+		<div class="screenshot" data-type="sprite" data-offsetY="5200" data-Xposition="50%" data-speed="2"></div>
+		<article>
+	    	<div class="textbox">   	
+		    </div>
+    	</article>
+	</section>
+
+		
+	
+	<div id="device"></div>
+
+	
+ 
+</div>	<!-- End Main Div -->
+
+
+  <!-- Javascript -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+  	<script src='js/vendor/iscroll.js'></script>
+	
+	<script src="js/all-scripts.min.js"></script>
+	
+
+  <!--[if lt IE 7 ]>
+    <script src="js/vendor/dd_belatedpng.js"></script>
+    <script>DD_belatedPNG.fix("img, .png_bg");
+  <![endif]-->
+
+<script type="text/javascript">
+
+/*
+ * iScroll
+ */
+ var myScroll;
+
+ function loaded() {
+	$('#arrow-prev').hide();
+ 	myScroll = new iScroll('wrapper', {
+ 		snap: true,
+ 		momentum: false,
+ 		hScrollbar: false,
+ 		onScrollEnd: function () {
+ 			document.querySelector('#indicator > li.active').className = '';
+ 			document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+ 			
+ 			if(this.currPageX > 0){
+ 				//alert(this.currPageX);
+ 				$('#arrow-prev').fadeIn('fast');
+ 			}
+ 			else{
+ 				$('#arrow-prev').fadeOut('slow');
+ 			}
+ 			
+ 			if(this.currPageX >= 20){
+ 				//alert(this.currPageX);
+ 				$('#arrow-next').fadeOut('slow');
+ 			}
+ 			else{
+ 				$('#arrow-next').fadeIn('fast');
+ 			}
+ 		}
+ 	 });
+ }
+
+ document.addEventListener('DOMContentLoaded', loaded, false);
+
+ 
+</script>
+
+</body>
+</html>

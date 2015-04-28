@@ -1,0 +1,2 @@
+Drag and drop the points of each line to create a new spider!
+<p><a href='img/work/interactive/3d_line1.html' target='_blank'>Launch</a>.</p>

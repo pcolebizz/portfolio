@@ -1,0 +1,1204 @@
+@charset "UTF-8";
+/**
+ * HTML5 ✰ Boilerplate
+ *
+ * style.css contains a reset, font normalization and some base styles.
+ *
+ * Credit is left where credit is due.
+ * Much inspiration was taken from these projects:
+ * - yui.yahooapis.com/2.8.1/build/base/base.css
+ * - camendesign.com/design/
+ * - praegnanz.de/weblog/htmlcssjs-kickstart
+ */
+/**
+ * html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
+ * v1.6.1 2010-09-17 | Authors: Eric Meyer & Richard Clark
+ * html5doctor.com/html-5-reset-stylesheet/
+ */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/**
+ * Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/
+ */
+body {
+  font: 13px/1.231 sans-serif;
+  *font-size: small;
+}
+
+/* Hack retained to preserve specificity */
+select, input, textarea, button {
+  font: 99% sans-serif;
+}
+
+/* Normalize monospace sizing:
+   en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif;
+}
+
+/**
+ * Minimal base styles.
+ */
+/* Always force a scrollbar in non-IE */
+html {
+  overflow-y: scroll;
+}
+
+/* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+  outline: none;
+}
+
+ul, ol {
+  margin-left: 2em;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+/* Remove margins for navigation lists */
+nav ul, nav li {
+  margin: 0;
+  list-style: none;
+  list-style-image: none;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong, th {
+  font-weight: bold;
+}
+
+td {
+  vertical-align: top;
+}
+
+/* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+pre {
+  /* www.pathf.com/blogs/2008/05/formatting-quoted-code-in-blog-posts-css21-white-space-pre-wrap/ */
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+
+textarea {
+  overflow: auto;
+}
+
+/* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+.ie6 legend, .ie7 legend {
+  margin-left: -7px;
+}
+
+/* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+  cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0;
+}
+
+/* Colors for form validity */
+input:invalid, textarea:invalid {
+  border-radius: 1px;
+  box-shadow: 0px 0px 5px red;
+}
+
+.no-boxshadow input:invalid, .no-boxshadow textarea:invalid {
+  background-color: #f0dddd;
+}
+
+/* These selection declarations have to be separate
+   No text-shadow: twitter.com/miketaylr/status/12228805301
+   Also: hot pink! */
+::-moz-selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #FF5E99;
+  color: #fff;
+  text-shadow: none;
+}
+
+/* j.mp/webkit-tap-highlight-color */
+a:link {
+  -webkit-tap-highlight-color: #FF5E99;
+}
+
+/* Make buttons play nice in IE:
+   www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+button {
+  width: auto;
+  overflow: visible;
+}
+
+/* Bicubic resizing for non-native sized IMG:
+   code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/**
+ * You might tweak these..
+ */
+body, select, input, textarea {
+  /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
+  color: #444;
+  /* Set your base font here, to apply evenly */
+  /* font-family: Georgia, serif;  */
+}
+
+/* Headers (h1, h2, etc) have no default font-size or margin; define those yourself */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+a, a:active, a:visited {
+  color: #607890;
+}
+
+a:hover {
+  color: #036;
+}
+
+/**
+ * Primary styles
+ *
+ * Author: 
+ */
+/**
+ * Non-semantic helper classes: please define your styles before this section.
+ */
+/* For image replacement */
+.ir {
+  display: block;
+  text-indent: -999em;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  direction: ltr;
+}
+
+/* Hide for both screenreaders and browsers:
+   css-discuss.incutio.com/wiki/Screenreader_Visibility */
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* Hide only visually, but have it available for screenreaders: by Jon Neal.
+  www.webaim.org/techniques/css/invisiblecontent/  &  j.mp/visuallyhidden */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: drupal.org/node/897638 */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/* The Magnificent Clearfix: Updated to prevent margin-collapsing on child elements.
+   j.mp/bestclearfix */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+/* Fix clearfix: blueprintcss.lighthouseapp.com/projects/15318/tickets/5-extra-margin-padding-bottom-of-page */
+.clearfix {
+  zoom: 1;
+}
+
+/**
+ * Media queries for responsive design.
+ *
+ * These follow after primary styles so they will successfully override.
+ */
+@media all and (orientation: portrait) {
+  /* Style adjustments for portrait mode goes here */
+}
+@media all and (orientation: landscape) {
+  /* Style adjustments for landscape mode goes here */
+}
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+/**
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
+#wrapper {
+  width: 100%;
+  max-width: 960px;
+  max-height: 550px;
+  margin-top: 0px;
+  float: left;
+  position: relative;
+  /* On older OS versions "position" and "z-index" must be defined, */
+  z-index: 1;
+  /* it seems that recent webkit is less picky and works anyway. */
+  overflow: hidden;
+  	/*
+  	-moz-border-radius: 1em;
+  	border-radius: 1em;
+      -webkit-box-shadow:0 7px 7px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow:0 7px 7px rgba(0, 0, 0, 0.2);
+      box-shadow:0 7px 7px rgba(0, 0, 0, 0.2);
+      */
+    /* For IE 8 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
+	*/
+  /* For IE 5.5 - 7 
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
+  */
+  border: 1px solid;
+  border-color: yellow;
+}
+
+#scroller {
+  width: 19960px;
+  max-height: 500px;
+  float: left;
+  margin: 0px;
+  padding: 0;
+  z-index: 1;
+  border: 0px solid;
+  border-color: red;
+}
+
+#scroller ul {
+  list-style: none;
+  display: block;
+  float: left;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  border: 0px solid;
+  border-color: red;
+}
+
+#scroller li {
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 950px;
+  height: 100%;
+  max-width: 950px;
+  max-height: 500px;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  z-index: 2;
+  border: 0px solid;
+  border-color: pink;
+}
+
+#scroller li .imgContainer {
+  width: 590px;
+  border: 0px solid;
+  border-color: pink;
+  float: right;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+#scroller li img {
+  width: 100%;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+#scroll-nav {
+  position: relative;
+  margin-top: -40px;
+  width: 430px;
+  height: 25px;
+  float: right;
+  /* Adds shadow to the bottom of the bar 
+  -webkit-box-shadow: 0px 0px 3px 0px #000000;
+  -moz-box-shadow: 0px 0px 3px 0px #000000;
+  box-shadow: 0px 0px 3px 0px #000000;
+  */
+  /* Adds the transparent background 
+  background-color: rgba(51,51,51, 0.5);*/
+  color: rgba(51, 51, 51, 0.9);
+  z-index: 10;
+  font-size: 1.15em;
+  padding-top: 10px;
+  border: 0px solid;
+  border-color: green;
+}
+
+#arrow-next {
+  background: url(../img/slider_arrow_next.png) no-repeat center top transparent;
+  margin-left: 97.5%;
+  height: 270px;
+  width: 40px;
+  position: absolute;
+  top: 43%;
+  border: 0px solid;
+  border-color: pink;
+  z-index: 1202;
+  khtml-opacity: .50;
+  -moz-opacity: .50;
+  -ms-filter: "alpha(opacity=50)";
+  filter: alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity: .50;
+}
+
+#arrow-prev {
+  background: url(../img/slider_arrow_prev.png) no-repeat center top transparent;
+  margin-left: -8%;
+  height: 270px;
+  width: 40px;
+  position: absolute;
+  top: 43%;
+  border: 0px solid;
+  border-color: pink;
+  z-index: 1203;
+  -khtml-opacity: .50;
+  -moz-opacity: .50;
+  -ms-filter: "alpha(opacity=50)";
+  filter: alpha(opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  opacity: .50;
+}
+
+#prev, #next {
+  float: left;
+  font-weight: bold;
+  font-size: 1.8em;
+  color: rgba(220, 90, 17, 0.9);
+  width: 30px;
+  height: 100%;
+  border: 0px solid;
+  border-color: pink;
+  margin-top: -3px;
+  padding: 2px;
+}
+
+#prev {
+  padding-left: 4px;
+}
+
+#next {
+  float: right;
+  text-align: right;
+  padding-right: 4px;
+}
+
+#indicator, #indicator > li {
+  display: block;
+  float: left;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#indicator {
+  padding: 0px 0 0 0px;
+  border: 0px solid;
+  border-color: blue;
+}
+
+#indicator > li {
+  text-indent: -9999em;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: #ddd;
+  overflow: hidden;
+  margin-right: 6px;
+}
+
+#indicator > li.active {
+  background: #cc6633;
+}
+
+#indicator > li:last-child {
+  margin: 0;
+}
+
+/* iPad [landscape] */
+@media only screen and (max-device-width: 1024px) {
+  #wrapper {
+    -webkit-box-shadow: 0 7px 7px transparent;
+  }
+
+  #scroll-nav {
+    float: left;
+    background-color: rgba(51, 51, 51, 0);
+    color: rgba(51, 51, 51, 0.9);
+    margin-top: -60px;
+  }
+
+  #prev, #next {
+    font-size: 2.5em;
+    line-height: .15em;
+  }
+
+  #scroller li .workContent {
+    font-size: .85em;
+  }
+}
+/* iPad Retina [landscape + Portrait] */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  #scroll-nav {
+    float: left;
+    margin-left: 37%;
+    background-color: rgba(51, 51, 51, 0);
+    color: rgba(51, 51, 51, 0.9);
+    margin-top: -50px;
+  }
+
+  #prev, #next {
+    font-size: 2em;
+    line-height: .15em;
+  }
+
+  #wrapper {
+    -webkit-box-shadow: 0 7px 7px transparent;
+    max-height: 540px;
+  }
+
+  #scroller {
+    margin-top: 20px;
+    background-color: rgba(55, 55, 55, 0);
+  }
+
+  #scroller li .workContent {
+    font-size: .9em;
+  }
+}
+@media only screen and (max-device-width: 768px) and (orientation: portrait) {
+  #scroller li .workContent {
+    width: 330px;
+    max-height: 670px;
+    font-size: .85em;
+  }
+
+  #scroller li .imgContainer {
+    width: 600px;
+    border: 0px solid;
+    border-color: pink;
+    float: right;
+  }
+
+  #scroller li img {
+    width: 65%;
+  }
+}
+/*************************************************
+ * Site-Specifc CSS
+*************************************************/
+body {
+  font-family: "Rokkitt";
+  background: #E6E6E6;
+}
+
+a {
+  text-decoration: none;
+}
+
+/********************************************************/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  height: 50px;
+  z-index: 40000;
+  /* Adds shadow to the bottom of the bar */
+  box-shadow: 0px 0px 3px #000000 ;
+  /* Adds the transparent background */
+  background-color: rgba(51, 51, 51, 0.5);
+}
+header .logo {
+  display: inline;
+  font-size: 2em;
+  color: #fff;
+  padding-top: 9px;
+  padding-left: 25px;
+  float: left;
+  width: 30%;
+  min-width: 320px;
+  border-style: solid;
+  border-width: 0px;
+}
+header .logoDesc {
+  display: inline;
+  color: #ccc;
+  margin-left: .4em;
+  letter-spacing: .02em;
+  font-size: .7em;
+  border-style: solid;
+  border-width: 0px;
+}
+
+#navigation {
+  text-align: center;
+  padding-top: 12px;
+  z-index: 50000;
+}
+#navigation a {
+  font-size: 1.4em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+  line-height: 1.5em;
+  color: #fff;
+}
+#navigation a:hover {
+  color: #ff9966;
+}
+#navigation .active {
+  color: #ff9966;
+}
+#navigation ul {
+  float: right;
+  padding-top: .25em;
+  padding-right: 5%;
+}
+#navigation li {
+  float: left;
+}
+
+article {
+  border-radius: 5px 5px 5px 5px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2) ;
+  background-color: rgba(231, 231, 231, 0.7);
+  margin-top: 8%;
+  padding: 2.3em 2.3em;
+  z-index: 1500;
+}
+article h2 {
+  font-size: 2.4em;
+  line-height: .5em;
+  color: #646464;
+}
+article p {
+  font-size: 1.2em;
+  line-height: 1.1em;
+  margin-top: 1em;
+  color: #646464;
+}
+article a {
+  color: #ff9966;
+}
+article a:visited {
+  color: #ff9966;
+}
+
+/*use min-width for iPad*/
+.sectionContent {
+  height: 1500px;
+  width: 100%;
+  position: relative;
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* About */
+#about article {
+  width: 60%;
+  margin-left: 30%;
+}
+
+/* Client Work */
+#work article {
+  width: 950px;
+  height: 590px;
+  margin-left: 6%;
+  margin-top: 6%;
+  position: absolute;
+  font-size: 1em;
+  border-style: solid;
+  border-width: 1px;
+}
+
+#work li .workContent {
+  width: 345px;
+  max-height: 590px;
+  float: left;
+  font-size: 1em;
+  color: #E0E0E0;
+  text-decoration: none;
+  border: 1px solid;
+  border-color: green;
+}
+
+#work li .workTitle {
+  font-size: 1.5em;
+  line-height: 1.2em;
+  font-style: bold;
+  color: #FFF;
+}
+
+/* LaunchBx */
+#launchbx article {
+  z-index: 22;
+  margin-left: 5%;
+  width: 40%;
+  position: absolute;
+}
+
+#launchbx .screenshot {
+  background: url() no-repeat transparent;
+  background-size: cover;
+  margin-left: 50%;
+  width: 600px;
+  height: 1000px;
+  position: absolute;
+  top: 0px;
+  border: 1px solid;
+  border-color: pink;
+}
+
+/* Groovable */
+#groovable .screenshot {
+  background: url() no-repeat transparent;
+  margin-left: 5%;
+  width: 500px;
+  height: 1000px;
+  position: absolute;
+  top: 0px;
+  border: 1px solid;
+  border-color: pink;
+}
+
+#groovable article {
+  margin: 100px 0 0 50%;
+  position: absolute;
+  top: 0;
+  width: 45%;
+  margin-left: 48%;
+}
+
+/* OOTO */
+#ooto article {
+  z-index: 22;
+  margin-left: 5%;
+  top: 5%;
+  width: 40%;
+  position: absolute;
+}
+
+#ooto .screenshot {
+  background: url() no-repeat transparent;
+  margin-left: 55%;
+  width: 600px;
+  height: 1000px;
+  position: absolute;
+  top: 0px;
+  border: 1px solid;
+  border-color: pink;
+}
+
+/*  ************************************************************ */
+/*  Media Queries 
+/*  ************************************************************ */
+/*This helps cover small on desktop - need to clean-up */
+@media only screen and (max-width: 850px) {
+  header {
+    height: 70px;
+  }
+
+  article {
+    margin-top: 88px;
+  }
+
+  #navigation a {
+    font-size: 1.5em;
+  }
+
+  #navigation ul {
+    margin-top: -.5em;
+    margin-right: -3em;
+  }
+
+  #about article, #launchbx article, #groovable article, #ooto article {
+    width: 83%;
+    margin-left: 2%;
+  }
+
+  #groovable .screenshot, #launchbx .screenshot, #ooto .screenshot {
+    display: none;
+  }
+}
+/* ----------- iPhone 4 and 4S ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 5 and 5S ----------- 
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {
+  .sectionContent {
+    height: 100%;
+    min-height: 1500px;
+    min-width: 1120px;
+    width: 100%;
+    position: relative;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  header {
+    height: 80px;
+  }
+  header .logoDesc {
+    display: none;
+  }
+
+  #navigation a {
+    font-size: 2.5em;
+  }
+
+  #navigation ul {
+    margin-top: -2em;
+    margin-right: -1em;
+  }
+
+  article {
+    margin-top: 88px;
+    font-size: 1.7em;
+  }
+
+  #about article {
+    width: 86%;
+    height: 90%;
+    margin-left: 2%;
+  }
+
+  #launchbx article {
+    width: 80%;
+    height: 90%;
+    margin-left: 1%;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  #groovable article {
+    width: 80%;
+    height: 90%;
+    margin-left: 1%;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  #ooto article {
+    width: 80%;
+    height: 90%;
+    margin-left: 1%;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  #groovable .screenshot, #launchbx .screenshot, #ooto .screenshot {
+    display: none;
+  }
+}
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 6 ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* ----------- iPhone 6+ ----------- */
+/* Portrait and Landscape */
+/* Portrait */
+/* Landscape */
+/* iPhone 6[portrait + landscape] 
+@media only screen 
+    and (min-device-width : 375px) 
+    and (max-device-width : 667px) 
+    and (orientation : portrait) 
+    and (-webkit-min-device-pixel-ratio : 2)
+{#navigation {height: 75px;}}
+*/
+/* iPad [portrait] 
+@media only screen and (max-device-width: 768px) and (orientation:portrait) { 
+   	
+   	margin-top: 85px;
+   	
+   	#bodybg {  background: url(../img/slide1.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+   	#navigation {background-color: rgba(5,5,5, 0.7); height: 70px;}
+   	#navigation  a{ font-size: 1.3em; padding-left: .7em; padding-right: .7em; line-height: 1em; margin-top: -15px;}
+	#navigation .logoDesc { font-size: 1.3em; line-height: 1.5em; float: left; letter-spacing:.5px}
+	#about article { width: 75%; margin-left: 15%; }
+	
+
+	#work article { width: 950px; height: 600px;  margin-left: 0%; margin-top: 4em;}
+	#work article img {width: 80%;}
+	#launchbx article {  position: absolute; margin-left: 5%; width: 80%;}
+	
+	#groovable article {  margin: 100px 0 0 50%; position: absolute; top: 0; width: 70%; margin-left: 42%;}
+	#groovable .screenshot { background: url() no-repeat scroll center top transparent; margin-left: 6%; height: 800px; padding: 1em; position: absolute; text-indent: -9999px; top: 5%; width: 500px; border: 0px solid; border-color: pink;}
+	
+	#ooto article {top: 2%; width: 45%;}
+}
+*/
+/* iPad [landscape] 
+@media only screen and (max-device-width: 1024px) and (orientation:landscape) { 
+	
+	#bodybg {  background: url(../img/slide1x2.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+	#navigation {background-color: rgba(5,5,5, 0.7); height: 40px;}
+	#navigation  a{ font-size: 1.3em; padding-left: .7em; padding-right: .7em; line-height: 1em; margin-top: -15px;}
+	#about article { width: 70%; margin-left: 20%; }
+	
+	#launchbx article {margin-left: 3%; width: 47%;}
+	#launchbx .screenshot { background: url() no-repeat scroll center top transparent;  margin-left: 45%; height: 600px; padding: 1em; position: absolute; text-indent: -9999px; top: 130px; width: 600px; border: 0px solid; border-color: pink;}
+	
+
+	#device{transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);}
+
+	#work article { width: 950px; height: 600px;  margin-left: 0%; margin-top: 4em;}
+}
+*/
+/* iPhone [portrait + landscape] 
+@media only screen and (max-width: 480px){
+	html {-webkit-text-size-adjust: none;}
+	body{font-size: 90%;}
+	
+	#bodybg {  background: url(../img/slide1xm.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+	
+	article {background-color: rgba(255, 255, 255, 0.4); margin-top: 5px; padding: 1em;  line-height: 1em; box-shadow: 0; color: #333366;}
+	article h2 { font-size: 1.5em; color: #333366; text-shadow: 0 2px 0 rgba(255,255,255,0.5);}
+	
+	#about { margin-bottom: 200px;}
+	#about article { width: 90%; margin-left: 0; margin-top: 50px;}
+	#about articke h2 { font-size: 1.5em; color: #333366; text-shadow: 0 2px 0 rgba(255,255,255,0.5);}
+	
+	#work{display: none;}
+	#launchbx{display: none;}
+	#groovable{display: none;}
+	#ooto{display: none;}
+	
+	#navigation a {display: none;}
+	
+	
+	#navigation ul { float: left; margin-top: -.5em; width:100%;}
+	#navigation {background-color: rgba(5,5,5, 0.6); height: 40px;}
+	
+	#navigation a { font-size: .85em; line-height: .7em; color: #ccc; text-decoration: none;}
+	#navigation .logo { font-size: 1.5em; color: #fff; margin: 0 2px 0 10px; line-height: .5em; float: left;}
+	#navigation .logoDesc { font-size: 1em; line-height: 1.1em; float: left; letter-spacing:.35px}
+}
+*/
+/* add iamges in for wider screens */
+@media screen and (min-width: 1041px) {
+  #about {
+    background: url(../img/slide1x2.jpg) 50% 0 no-repeat fixed;
+  }
+
+  #work {
+    background: url(../img/slide2.jpg) 50% 0 no-repeat fixed;
+  }
+
+  #launchbx {
+    background: url(../img/slide3.jpg) 100% 0 no-repeat fixed;
+  }
+
+  #groovable {
+    background: url(../img/slide4.jpg) 100% 100% no-repeat fixed;
+  }
+
+  #ooto {
+    background: url(../img/slide1x2.jpg) 50% 0 no-repeat fixed;
+  }
+
+  #experiments {
+    background: url(../img/slide2.jpg) 100% 0 no-repeat fixed;
+  }
+
+  #about .clouds {
+    background: white transparent;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    background: url() scroll center top transparent;
+    margin-left: 0%;
+    height: 100%;
+    padding: 0em;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    border: 0px solid;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    border-color: pink;
+  }
+
+  #work .clouds {
+    background: white transparent;
+    background: rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    background: url() scroll center top transparent;
+    margin-left: 0%;
+    height: 100%;
+    padding: 0em;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    border: 0px solid;
+    border-color: pink;
+  }
+
+  #launchbx .clouds {
+    background: rgba(55, 55, 55, 0.1);
+    z-index: 9;
+    background: url() scroll center top transparent;
+    margin-left: 0%;
+    height: 100%;
+    padding: 0em;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    border: 0px solid;
+    border-color: pink;
+  }
+}
+/*
+@media screen and (max-width: 1040px) {
+	#bodybg {  background: url(../img/slide1x2.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }	
+}
+*/
+/* iPad Retina [landscape + Portrait] 
+@media only screen and (max-device-width: 1024px) and (orientation:landscape),
+only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+	#bodybg {  background: url(../img/slide1x2.jpg); background-repeat: no-repeat; background-size: 2048px 1536px; position: fixed; top: 0; width: 100%; height: 100%; }
+	
+	#navigation {background-color: rgba(5,5,5, 0.7);}
+	#navigation a { font-size: .9em; padding-left: 1em; padding-right: 1em; line-height: 1.5em; color: #fff; text-decoration: none;}
+	
+	article {padding: 1.5em 2em; line-height: .25em;}
+	article h2 { font-family: 'Rokkitt'; font-size: 2.25em; margin: 10px 0; line-height: .5em; color: #ccc; text-shadow: 0 -2px 0 rgba(5,5,5,0.5);}
+	article p {font-size: 3.2em;  line-height: 1.1em; margin-top: 1em;}
+	
+	#work {margin-left: 1em; margin-top: 15%;}
+	#work article { z-index: 21; width: 950px; height: 550px;}
+
+	#launchbx article {margin-left: 3%; width: 60%;}
+	#launchbx .screenshot { background: url(); background-repeat: no-repeat; background-size: 75%; background-position:left;  margin-top: -10%; margin-right: 10px;}
+	
+	
+	#groovable { background-image: none; -webkit-transform: translate3d(0,0,0);}
+	#groovable article {margin-right: 1%; width: 52%;}
+	
+	#ooto article {top: 2%; width: 36%;}
+	#ooto img {width: 80%;}
+	#ooto .screenshot { margin-left: 43%; margin-bottom: 10px; height: 600px; padding: .5em; position: absolute; text-indent: -9999px; top: 0px; width: 600px; border: 0px solid; border-color: pink;}
+		
+	
+	#device{transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);}
+	
+	.sectionContent { height: 1000px; padding-top: 1%; margin: 0; width: 100%; position: relative; margin: 0 auto; z-index: 1400; transform: translate3d(0,0,0); -webkit-transform: translate3d(0,0,0);	}
+}
+*/
+/* iPad [portrait] 
+@media only screen and (max-device-width: 768px) and (orientation:portrait) { 
+	#work article { width: 950px; height: 600px;  margin-left: 0%; margin-top: 10em;}
+	#ooto article {top: 5%; width: 50%;}
+	#ooto .screenshot { margin-left: 59%;}
+}
+*/

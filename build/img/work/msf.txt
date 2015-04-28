@@ -1,0 +1,2 @@
+Rich interactive experience to showcase the 40+ years of Nike innovation
+by showing the historical relationships between selected Nike products (shoes, apparel). Products were searchable and sortable by sport, product type, historical story. Architected large and complex client-side relational database and Flash application to support the maintenance of hundreds of digital assets for online website. Assets included images, video, audio and text.
