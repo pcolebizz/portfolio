@@ -1,45 +1,53 @@
+$number-of-slides: 22;
+$wrapper-large-width: 960px;
+$wrapper-large-height: 550px;
+$wrapper-small-width: 475px;
+$wrapper-small-height: 800px;
+
+$scroller-width-large: ($number-of-slides * ($wrapper-large-width));
+$scroller-height-large: 500px;
+$scroller-width-small: ($number-of-slides * ($wrapper-small-width - 10px));
+$scroller-image-container-width-large: 588px;
+$scroller-image-container-width-small: 300px;
+
+$arrow-position-top-large: 43%;
+$arrow-next-position-large: 97.5%;
+$arrow-prev-position-large: -8%;
+
+$arrow-position-top-medium: 80%;
+$arrow-next-position-medium: 90%;
+$arrow-prev-position-medium: 0%;
+
+$arrow-position-top-small: 14%;
+$arrow-next-position-small: 35%;
+$arrow-prev-position-small: -3%;
+
+
+
+$scroll-nav-width: $number-of-slides * 20px;
 
 #wrapper {
 	width: 100%;
- 	max-width: 960px;
-	max-height:550px;
-	margin-top: 0px;
+ 	max-width: $wrapper-large-width;
+	max-height:$wrapper-large-height;
+	margin-top: 10px;
 	float:left;
 	position:relative;	/* On older OS versions "position" and "z-index" must be defined, */
 	z-index:1;			/* it seems that recent webkit is less picky and works anyway. */
 	overflow:hidden;
-	
-	/*
-	-moz-border-radius: 1em;
-	border-radius: 1em;
-    -webkit-box-shadow:0 7px 7px rgba(0, 0, 0, 0.2);
-    -moz-box-shadow:0 7px 7px rgba(0, 0, 0, 0.2);
-    box-shadow:0 7px 7px rgba(0, 0, 0, 0.2);
-    */
-
-    /* For IE 8 
-	-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000')";
-	*/
-	/* For IE 5.5 - 7 
-	filter: progid:DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#000000');
-	*/
-	
-	border: 1px solid; border-color: yellow;
+	border: 0px solid; border-color: yellow;
 }
 
 
 #scroller {
-	width: 19960px;
-	max-height:500px;
+	width: $scroller-width-large;
+	max-height: $scroller-height-large;
 	float:left;
 	margin: 0px;
 	padding:0;
 	z-index: 1;
 	border: 0px solid; border-color: red;
 }
-
-
-
 
 #scroller ul {
 	list-style:none;
@@ -57,18 +65,18 @@
 	-o-box-sizing:border-box;
 	box-sizing:border-box;
 	display:block; float:left;
-	width: 950px;
+	width: $wrapper-large-width - 10px;
 	height: 100%;
-	max-width: 950px;
-	max-height:500px;
+	max-height:$wrapper-large-height - 50px;
 	transform: translate3d(0,0,0);
 	-webkit-transform: translate3d(0,0,0);
 	z-index: 2;	
-	border: 0px solid; border-color: pink;
+	border: 0px solid; border-color: rgba(231,231,231, 0.8);;
 }
 
 #scroller li .imgContainer {
-	width: 590px;
+	width: $scroller-image-container-width-large;
+	padding-right: 1px;
 	border: 0px solid; border-color: pink;
 	float:right;
 	transform: translate3d(0,0,0);
@@ -81,64 +89,52 @@
 	-webkit-transform: translate3d(0,0,0);
 }
 
-
-
 #scroll-nav {
 	position: relative;
 	margin-top: -40px;
-	width:430px;
+	margin-right: 8%;
+	width:$scroll-nav-width;
 	height: 25px;
 	float:right;
-	/* Adds shadow to the bottom of the bar 
-	-webkit-box-shadow: 0px 0px 3px 0px #000000;
-	-moz-box-shadow: 0px 0px 3px 0px #000000;
-	box-shadow: 0px 0px 3px 0px #000000;
-	*/
-	/* Adds the transparent background 
-	background-color: rgba(51,51,51, 0.5);*/
 	color: rgba(51,51,51, .9);
 	z-index: 10;
 	font-size: 1.15em;
 	padding-top: 10px;
-	
 	border: 0px solid; border-color: green;
 }
 
 #arrow-next{
 	background: url(../img/slider_arrow_next.png) no-repeat center top transparent;  
-	margin-left: 97.5%; 
+	margin-left: $arrow-next-position-large; 
 	height: 270px; 
 	width: 40px; 
 	position: absolute; 
-	top: 43%; 
+	top: $arrow-position-top-large; 
 	border: 0px solid; 
-	border-color: pink;
 	z-index: 1202;
-	
 	khtml-opacity:.50; 
- -moz-opacity:.50; 
- -ms-filter:"alpha(opacity=50)";
-  filter:alpha(opacity=50);
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
-  opacity:.50;
+    -moz-opacity:.50; 
+    -ms-filter:"alpha(opacity=50)";
+   filter:alpha(opacity=50);
+   filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+   opacity:.50;
 } 
 
 #arrow-prev{
 	background: url(../img/slider_arrow_prev.png) no-repeat center top transparent;  
-	margin-left: -8%; 
+	margin-left: $arrow-prev-position-large; 
 	height: 270px; 
 	width: 40px; 
 	position: absolute; 
-	top: 43%; 
+	top: $arrow-position-top-large; 
 	border: 0px solid; 
-	border-color: pink;
 	z-index: 1203;
 	 -khtml-opacity:.50; 
- -moz-opacity:.50; 
- -ms-filter:"alpha(opacity=50)";
-  filter:alpha(opacity=50);
-  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
-  opacity:.50;
+ 	-moz-opacity:.50; 
+ 	-ms-filter:"alpha(opacity=50)";
+  	filter:alpha(opacity=50);
+  	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.5);
+  	opacity:.50;
 } 
 
 
@@ -177,14 +173,14 @@
 
 #indicator > li {
 	text-indent:-9999em;
-	width:12px; height:12px;
+	width:13px; height:13px;
 	-webkit-border-radius:6px;
 	-moz-border-radius:6px;
 	-o-border-radius:6px;
 	border-radius:6px;
-	background:#ddd;
+	background:#888;
 	overflow:hidden;
-	margin-right:6px;
+	margin-right:7px;
 }
 
 #indicator > li.active {
@@ -200,7 +196,101 @@
 
 
 
-/* iPad [landscape] */
+
+
+
+
+
+
+/*  ************************************************************ */
+/*  Media Queries 
+/*  ************************************************************ */
+
+
+
+@media only screen and (max-width:1023px){
+	
+	#wrapper {
+		width: $wrapper-small-width;
+	 	max-width: $wrapper-small-width;
+		min-height:$wrapper-small-height;
+	}
+	
+	#scroller li {
+		width: $wrapper-small-width;
+		height: 100%;
+		max-width: $wrapper-small-width;
+		height:100%;
+		border: 0px solid; border-color: pink;
+	}
+		
+	#scroller li .imgContainer {
+		width: $scroller-image-container-width-small;
+		border: 0px solid; border-color: pink;
+		float:left;
+	}
+		
+	#arrow-next{
+		//margin-left: $arrow-next-position-small; 
+		//top: $arrow-position-top-small; 
+		border: 0px solid; 
+	} 
+
+	#arrow-prev{
+		//margin-left: $arrow-prev-position-small; 
+		//top: $arrow-position-top-small; 
+	} 
+	
+	#scroll-nav {float: left; margin-top: 40%;}
+	
+}
+
+
+
+
+/* iPad [landscape]*/
+@media only screen and (max-width: 1024px) and (orientation:landscape){ 
+	#arrow-next{ margin-left: $arrow-next-position-medium; top: $arrow-position-top-medium;}
+	#arrow-prev{ margin-left: $arrow-prev-position-medium; top: $arrow-position-top-medium;}	
+}
+
+/* iPad [portrait]*/
+@media only screen and (max-width: 1024px) and (orientation:portrait){ 
+	#arrow-prev{ margin-left: $arrow-prev-position-large - 8%;}
+}
+
+
+/* Small */
+@media only screen and (max-width: 767px) and (orientation:portrait){ 
+	
+	#wrapper {margin-top: -15px;}
+	
+	#scroller li .imgContainer {
+		width: $scroller-image-container-width-small;
+		border: 0px solid; border-color: pink;
+		float:left;
+	}
+	
+	#arrow-next{ margin-right: 25px; right: 2%; top: $arrow-position-top-small; width: 22px;}
+	#arrow-prev{ margin-left: $arrow-prev-position-small; top: $arrow-position-top-small; width: 22px;}
+	
+	
+	#indicator > li {
+		text-indent:-9999em;
+		width:10px; height:10px;
+		-webkit-border-radius:5px;
+		-moz-border-radius:5px;
+		-o-border-radius:5px;
+		border-radius:5px;
+		background:#888;
+		overflow:hidden;
+		margin-right:5px;
+	}
+}
+
+
+
+/* iPad [landscape] 
 @media only screen and (max-device-width: 1024px) { 
 	#wrapper {-webkit-box-shadow:0 7px 7px rgba(0, 0, 0, 0.0);}	
 	
@@ -218,9 +308,9 @@
 	
 	#scroller li .workContent {font-size: .85em;}
 }
+*/
 
-
-/* iPad Retina [landscape + Portrait] */
+/* iPad Retina [landscape + Portrait] 
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
 only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
@@ -244,11 +334,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	
 	#scroller li .workContent {font-size: .9em;}
 }
+*/
 
 
 
-
-
+/*
 @media only screen and (max-device-width: 768px) and (orientation:portrait) { 
 	
 	#scroller li .workContent {
@@ -267,7 +357,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		width: 65%; 
 	}
 }
-
+*/
 
 
 

@@ -1,3 +1,0 @@
-User sees bus stand with giant Palm Treo.
-User enters short code for the info they want.
-System responds with info related to user's request.

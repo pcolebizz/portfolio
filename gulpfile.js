@@ -80,7 +80,7 @@ var gulp = require('gulp'),
 	
 	// Default task with images
 	gulp.task('default-images', ['clean-with-images'], function() {
-	    gulp.start('styles','scripts', 'images');
+	    gulp.start('styles','scripts', 'images','move-vendor-files');
 		//gulp.start('watch', 'styles','concatjs','scripts', 'images');
 	});
 

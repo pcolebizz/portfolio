@@ -1,3 +1,0 @@
-Homepage with hero.
-Product grid wall.
-Product Detail Page.

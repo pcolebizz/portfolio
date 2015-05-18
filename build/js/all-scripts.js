@@ -24,6 +24,11 @@ function fadeSection(section){
 
 $(document).ready(function(){
 	
+	 var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+	 //var height = (window.innerHeight > 0) ? window.innerHeight : screen.height;
+	 
+	 //alert("height: " + height);
+	
 	var currentPage = '#about';
 	var previousPage;
 	var pageHash;
@@ -66,21 +71,12 @@ $(document).ready(function(){
 	
 
 	function handleActiveBtn(newBtn){
-		
 		previousPage = currentPage;
-		//alert("prev page: " + previousPage);
 		currentPage = newBtn;
-		//alert("current page: " + currentPage);
-		
-		
 		previousBtn = previousPage + '-section';
-		$(previousBtn).removeClass('active');
-		
+		$(previousBtn).removeClass('active');		
 		currentBtn = newBtn + '-section';
-		
-		$(currentBtn).addClass('active');
-		//xcurrentPage = newBtn;
-		
+		$(currentBtn).addClass('active');		
 	}
 	
 						
@@ -114,7 +110,9 @@ $(document).ready(function(){
 	
 				// Scroll the background at var speed
 				// the yPos is a negative value because we're scrolling it UP!								
-				var yPos = -($window.scrollTop() / $self.data('speed')); 
+				var yPos = -($window.scrollTop() / $self.data('speed'));
+				
+				if(!yPos) yPos = 0;
 				
 				// If this element has a Y offset then add it on
 				if ($self.data('offsetY')) {
@@ -183,15 +181,17 @@ $(document).ready(function(){
 		  $(this).attr('src', $(this).attr('id'));
 		});
 		
-		imageUrl = "img/clouds1.png";
+		//imageUrl = "img/clouds1.png";
 		lbxScreen = "img/launcher-screenshot.png";
 		grScreen = "img/groovable-overview.png";
 		ootoScreen = "img/ooto1.png";
 		experScreen = "img/groovable-overview.png";
 		
+		/*
 		$('#about .clouds').css('background-image', 'url(' + imageUrl + ')');
 		$('#work .clouds').css('background-image', 'url(' + imageUrl + ')');
 		$('#launchbx .clouds').css('background-image', 'url(' + imageUrl + ')');
+		*/
 		
 		$('#launchbx .screenshot').css('background-image', 'url(' + lbxScreen + ')');
 		$('#groovable .screenshot').css('background-image', 'url(' + grScreen + ')');

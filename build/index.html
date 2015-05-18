@@ -11,8 +11,8 @@
   	<meta name="description" content="Portfolio for Peter Cole | Creative Technologist">
   	<meta name="author" content="Peter Cole">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
-	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">	
+
 		
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -27,6 +27,8 @@
 </head>
 
 <body>
+	
+
 	
 	<header>
 		<div class="logo">peter cole<div class="logoDesc">creative + technology</div></div>
@@ -44,22 +46,22 @@
 	</header>
 	
 
-	
-<div id= "main">
-
 <!--div id = "bodybg"></div>
 <div id="clouds"></div-->
+
+
+
 	
 	<!-- Section #1 / About -->
-	<section id="about" class="sectionContent" data-speed="6" data-type="background">  
+	<section id="about" class="sectionContent" data-speed="6" data-type="background" style="background-position: 50% 0px;">  
 		<!--div class="clouds" data-type="sprite"  data-speed="2"></div-->
 		<article>
 			<h2>about</h2>
 		    	<p>Hi! I'm Peter Cole, a developer/designer from the San Francisco Bay Area. 
-		    	I like to create innovative experiences for the web, mobile, desktop, audio/video, social networks and other forms of multimedia and digital marketing.</p>
+		    	I like to create innovative experiences for the web, mobile, desktop, audio/video, social networks, retail and other forms of multimedia and digital marketing.</p>
 		    	
 		    	<p>	    	
-		    	I currently oversee front-end development for apple.com. 		    	
+		    	I currently oversee front-end development for <a href="http://www.apple.com">apple.com</a>. I get to work with some of the most amazing developers, designers and thinkers in the world to create beautiful and engaging experiences that are seen by the whole world! My team has been fortunate to have worked on the launch of the Apple Watch, the iPhone 6, iPad Air 2, Macbook, and more.	    	
 		    	</p>
 				
 				
@@ -72,13 +74,13 @@
 		    	Prior to R/GA, I was the Director of Creative Development for <a href="http://www.akqa.com">AKQA</a>, San Francisco, 
 		    	where our clients included Nike, Microsoft, Xbox, Target, The Gap, Visa and others. While there, I helped Nike, Target and the Gap launch their first mobile experiences; worked on Nike's first Global website and campaign, for the Olympics; created one of the first SMS-controlled kiosks for Palm; and I always tried to push the limits of the browser for projects like Xbox 3 Halo, and Nike Presto.</p> 
 		    	
-		    	<p>In in my spare time, I created <a href="http://www.launchbx.net">LaunchBx</a> (beta), a web-based product
+		    	<p>In in my free time, I created <a href="http://www.launchbx.net">LaunchBx</a> (beta), a web-based product
 		    	to help small businesses connect with their customers. It includes a real-time, in-context content management and publishing platform for mobile, 
 		    	desktop and social networks.
 		    	
 		    	I also created <a href="http://www.groovable.com">Groovable</a> (in alpha), a tool for helping people collect and organize their online shopping and research. </p>
 		    	
-		    	<p>The primary tools I use include HTML5, CSS3, JS/jQuery, PHP, MySQL, Action Script 3, Gulp, JSON, XML; GIT/SVN; audio/video, and lots of APIs from  different services (Google, Facebook, etc.)
+		    	<p>The primary tools I use include HTML5, CSS3, JS/jQuery, PHP, MySQL, ActionScript 3, Gulp, JSON/XML; GIT/SVN; audio/video, and lots of APIs from  different services (Google, Facebook, etc.)
 		    	
 		    	<p>Please <a href="mailto:peter@petercole.com">email me</a> if you want to say hi!</p>
 		    	
@@ -101,6 +103,15 @@
 					
 					<ul id="thelist">
 						
+						
+						<!--Apple -->
+						<li><div class="imgContainer"><img src="img/work/apple1.jpg" alt="Apple.com"/></div><div class="workContent"><span class="workTitle"> Apple.com</span>
+						<p>I currently oversee front-end development for apple.com. I get to work with some of the most amazing developers, designers and thinkers in the world to create beautiful and engaging experiences that are seen by the whole world! I've been lucky to have worked on the launch of the Apple Watch, the iPhone 6, iPad Air 2, Macbook, and more. I championed and oversaw the mobile optimization of apple.com that started during our Sept. 2014 redesign.
+						</p>
+						<p>Visit the <a href="http://www.apple.com" target="_blank">site</a>.</p>
+						</div>
+						</li>
+						
 							<!--FIFA -->
 							<li><div class="imgContainer"><img src="img/work/fifa1.jpg" alt="FIFA"/></div><div class="workContent"><span class="workTitle">Prototype: Twitter-Driven WebGL Interface</span>
 							<p>WebGL/three.js, Twitter App.</p>
@@ -114,7 +125,7 @@
 						
 						
 					
-						<!--Chop Shop -->
+						<!--Chop Shop 
 						<li><div class="imgContainer"><img src="img/work/chopshop1.jpg" alt="Chop Shop App"/></div><div class="workContent"><span class="workTitle">Hyundai: Walking Dead Chop Shop</span>
 						<p>Mobile, Tablet, Browser Apps. Real-time social media campaign.</p>
 						<p>Challenge: Bring Hyundai, a sponsor of the Walking Dead TV show, into the conversation with fans of the Walking Dead. Provide the fans a tool to express themselves, and survive the zombie apocalypse!</p>  
@@ -123,7 +134,7 @@
 						<p>Visit the <a href="http://walkingdeadchopshop.com/" target="_blank">site</a>.</p>
 						</div>
 						</li>
-					
+					-->
 					
 						<!--FJ App -->
 						<li><div class="imgContainer"><img src="img/work/fj1.png" alt="FJ App"/></div><div class="workContent"><span class="workTitle">Foot Joy: FJ Clubhouse</span>
@@ -380,8 +391,7 @@
 							
 					</ul>
 				</div>
-			</div>
-
+				
 				<div id="scroll-nav" class="story" data-speed="4" data-type="background">
 					<ul id="indicator">
 						<li onclick="myScroll.scrollToPage((0));return false" class="active">1</li>
@@ -404,9 +414,14 @@
 						<li onclick="myScroll.scrollToPage((17));return false">18</li>
 						<li onclick="myScroll.scrollToPage((18));return false">19</li>
 						<li onclick="myScroll.scrollToPage((19));return false">20</li>	
-						<li onclick="myScroll.scrollToPage((20));return false">21</li>				
+						<li onclick="myScroll.scrollToPage((20));return false">21</li>			
 					</ul>
 				</div>
+				
+				
+			</div>
+
+				
 		
 		    			
 		</article>
@@ -415,7 +430,7 @@
 	
 	<!-- Section #3 / Lbx -->
 	<section id="launchbx" class="sectionContent" data-speed="11" data-type="background"> 
-		<div class="screenshot" data-type="sprite" data-offsetY="1620" data-Xposition="50%" data-speed="2"></div>
+		<div class="screenshot" data-type="sprite" data-offsetY="1650" data-Xposition="50%" data-speed="2"></div>
 		<!--div class="clouds" data-type="sprite"  data-speed="82"></div-->
     	<article>
     		<h2>LaunchBx</h2>
@@ -435,7 +450,7 @@
 	</section>
 	
 	<!-- Section #4 / Groovable -->
-	<section id="groovable" class="sectionContent" data-speed="6" data-type="background">  
+	<section id="groovable" class="sectionContent" data-speed="11" data-type="background">  
 		<div class="screenshot" data-type="sprite" data-offsetY="2400" data-Xposition="50%" data-speed="2"></div>
 		<article>
     		<h2>groovable</h2>
@@ -460,7 +475,7 @@
 	
 
 	<!-- Section #5 / OOTO -->
-	<section id="ooto" class="sectionContent" data-speed="6" data-type="background">  
+	<section id="ooto" class="sectionContent" data-speed="10" data-type="background">  
 		<div class="screenshot" data-type="sprite" data-offsetY="3170" data-Xposition="50%" data-speed="2"></div>
 		<article>
     		<h2>OOTO Conference App</h2>
@@ -478,25 +493,7 @@
 	</section>
 		
 	
-	
-	
-	
-	
-	
-	
-	
-		
-		
-		
-	
-	<!-- Section #7 / Skills -->
-	<section id="skills" class="sectionContent" data-speed="6" data-type="background">  
-		<div class="screenshot" data-type="sprite" data-offsetY="5200" data-Xposition="50%" data-speed="2"></div>
-		<article>
-	    	<div class="textbox">   	
-		    </div>
-    	</article>
-	</section>
+
 
 		
 	
@@ -504,7 +501,7 @@
 
 	
  
-</div>	<!-- End Main Div -->
+
 
 
   <!-- Javascript -->
