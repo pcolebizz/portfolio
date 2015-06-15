@@ -59,7 +59,7 @@ $(document).ready(function(){
 		event.preventDefault();
 		pageHash = $(this).attr('href');		
 		handleActiveBtn('#groovable');
-		scrollWin("#groovable");
+		scrollWin("#groovable");	
 	});
 	
 	$('#ooto-section').click(function(event) {
@@ -76,7 +76,7 @@ $(document).ready(function(){
 		previousBtn = previousPage + '-section';
 		$(previousBtn).removeClass('active');		
 		currentBtn = newBtn + '-section';
-		$(currentBtn).addClass('active');		
+		$(currentBtn).addClass('active');	
 	}
 	
 						
